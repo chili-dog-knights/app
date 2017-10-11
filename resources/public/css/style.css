@@ -1,0 +1,125 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+ul.inline {
+}
+
+ul.inline > li {
+  display: inline;
+  list-style-type: none;
+}
+
+ul.inline > li:not(:first-child) {
+  margin-left: 6px;
+}
+
+.progress-bar {
+  border: 1px solid #3B3B3B;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.progress-bar progress::-webkit-progress-bar {
+  background-color: inherit;
+}
+
+.progress-bar-indicator:after {
+  content: '\200b';
+}
+
+.progress-bar-label {
+  font-size: .75em;
+  font-weight: 600;
+  line-height: 1.5em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.character-progress-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.character-progress-bar-label {
+  width: 30px;
+}
+
+.character-health progress::-webkit-progress-value {
+  background-color: rgb(25, 169, 116) !important;
+}
+
+.character-health progress::-moz-progress-bar {
+  background-color: rgb(25, 169, 116) !important;
+}
+
+.character-health progress {
+  color: rgb(25, 169, 116);
+}
+
+.character-experience progress::-webkit-progress-value {
+  background-color: rgb(53, 126, 221) !important;
+}
+
+.character-experience progress::-moz-progress-bar {
+  background-color: rgb(53, 126, 221) !important;
+}
+
+.character-experience progress {
+  color: rgb(53, 126, 221);
+}
+
+.currency .currency-platinum rect {
+  fill: rgb(200, 203, 204);
+}
+
+.currency .currency-gold rect {
+  fill: rgb(240, 216, 120);
+}
+
+.currency .currency-electrum rect {
+  fill: rgb(188, 160, 61);
+}
+
+.currency .currency-silver rect {
+  fill: rgb(227, 227, 227);
+}
+
+.currency .currency-copper rect {
+  fill: rgb(173, 104, 8);
+}
+
+.statistics + .statistics {
+  border-top: none;
+}
+
+.spell-name {
+  font-variant: small-caps;
+}
+
+.spell-description {
+  /*white-space: pre;*/
+}
+
+.screen-index {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-index object {
+  height: 256px;
+  margin: 0 auto;
+  width: 256px;
+}
