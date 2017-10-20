@@ -50,6 +50,15 @@
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                            ;; https://github.com/binaryage/cljs-devtools
                            :preloads [devtools.preload]}}
+               {:id "service-worker"
+                :source-paths ["src"]
+                :compiler {:output-to "resources/public/sw.js"
+                           :output-dir "resources/public/js/compiled/service-worker"
+                           :language-in :ecmascript5
+                           :main dd.service-worker
+                           :optimizations :advanced
+                           :pretty-print false
+                           :source-map "resources/public/sw.js.map"}}
                ;; This next build is a compressed minified build for
                ;; production. You can build this with:
                ;; lein cljsbuild once min
@@ -100,7 +109,7 @@
              }
 
   :aliases {"package" ["do" "clean"
-                       ["cljsbuild" "once" "min"]
+                       ["cljsbuild" "once" "min" "service-worker"]
                        ["ring" "uberjar"]]}
 
   ;; Setting up nREPL for Figwheel and ClojureScript dev

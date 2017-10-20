@@ -914,6 +914,9 @@
 
 (compassus/mount! app (gdom/getElement "app"))
 
+(when-some [service-worker (.. js/navigator -serviceWorker)]
+  (.register service-worker "/sw.js"))
+
 (defn on-js-reload []
   ;; optionally touch your app-state to force rerendering depending on
   ;; your application
