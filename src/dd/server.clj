@@ -1,6 +1,7 @@
 (ns dd.server
   (:require [compojure.core :refer :all]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+            [ring.middleware.gzip :refer [wrap-gzip]]
             [ring.middleware.reload :refer [wrap-reload]]
             [ring.util.response :as response]))
 
@@ -12,5 +13,6 @@
 
 (def handler
   (wrap-reload
-    (wrap-defaults #'app-routes
-                   (assoc site-defaults :static {:resources "public"}))))
+    (wrap-gzip
+      (wrap-defaults #'app-routes
+                     (assoc site-defaults :static {:resources "public"})))))

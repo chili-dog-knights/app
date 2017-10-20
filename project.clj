@@ -7,6 +7,7 @@
   :min-lein-version "2.7.1"
 
   :dependencies [[alandipert/storage-atom "2.0.1"]
+                 [amalloy/ring-gzip-middleware "0.1.3"]
                  ;;[cljsjs/lunrjs "2.1.3-0"]
                  [clojure-humanize "0.2.2"]
                  [compassus "1.0.0-alpha3"]
